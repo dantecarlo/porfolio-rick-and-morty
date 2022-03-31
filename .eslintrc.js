@@ -28,9 +28,6 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'airbnb',
-    'airbnb/hooks',
-    'airbnb-typescript',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
@@ -44,6 +41,7 @@ module.exports = {
     'react-hooks',
     '@typescript-eslint',
     'prettier',
+    'jsx-a11y',
   ],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
@@ -62,4 +60,5 @@ module.exports = {
       },
     ],
   },
+  ignorePatterns: ['**/*.svg', '**/*eslintrc.js'],
 }

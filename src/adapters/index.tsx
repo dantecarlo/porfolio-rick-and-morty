@@ -1,1 +1,1 @@
-export * from './character.adapter';
+export * from './character.adapter'

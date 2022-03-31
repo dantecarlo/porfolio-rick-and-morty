@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import { CharactersApi } from '../types/characters.types'
 
 export const rickAndMortyApi = axios.create({
