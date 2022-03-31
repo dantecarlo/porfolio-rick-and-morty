@@ -25,27 +25,13 @@ export interface Character {
   created: string
 }
 
-export enum Gender {
-  Female = 'Female',
-  Genderless = 'Genderless',
-  Male = 'Male',
-  Unknown = 'unknown',
-}
+export type Gender = 'Female' | 'Genderless' | 'Male' | 'unknown'
 
 export interface Location {
   name: string
   url: string
 }
 
-export enum Species {
-  Alien = 'Alien',
-  Human = 'Human',
-  Humanoid = 'Humanoid',
-  MythologicalCreature = 'Mythological Creature',
-}
+export type Species = 'Alien' | 'Human' | 'Humanoid' | 'Mythological Creature'
 
-export enum Status {
-  Alive = 'Alive',
-  Dead = 'Dead',
-  Unknown = 'unknown',
-}
+export type Status = 'Alive' | 'Dead' | 'unknown'
