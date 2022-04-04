@@ -1,5 +1,5 @@
-import { Character } from 'types'
+import { ICharacterAPI } from 'types'
 
-export const charactersAdapter = (character: Character) => {
-  console.log(character)
-}
+export const charactersAdapter = (charactersAPI: ICharacterAPI) => ({
+  characters: charactersAPI.data.results,
+})
