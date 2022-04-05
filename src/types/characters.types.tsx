@@ -77,8 +77,9 @@ export interface ICharacterAPIHeaders {
 }
 
 export interface ICharacterCard {
-  character: ICharacter
+  character?: ICharacter
   gridArea: number
+  isLoading?: boolean
 }
 
 export interface IStyledCharacterCardWrapper {
