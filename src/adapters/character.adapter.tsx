@@ -1,3 +1,5 @@
-import { Character } from 'utils/types'
+import { ICharacterAPI } from 'types'
 
-export const charactersAdapter = (character: Character) => {}
+export const charactersAdapter = (charactersAPI: ICharacterAPI) => ({
+  characters: charactersAPI.data.results,
+})

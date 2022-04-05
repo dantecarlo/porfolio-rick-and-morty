@@ -2,11 +2,12 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['**/tsconfig.json'],
   },
   settings: {
     react: {
@@ -23,16 +24,27 @@ module.exports = {
     browser: true,
     amd: true,
     node: true,
+    es2021: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended', // Make sure this is always the last element in the array.
   ],
-  plugins: ['simple-import-sort', 'prettier'],
+  plugins: [
+    'react',
+    'simple-import-sort',
+    'react-hooks',
+    '@typescript-eslint',
+    'prettier',
+    'jsx-a11y',
+  ],
   rules: {
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'prettier/prettier': 'off',
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/accessible-emoji': 'off',
     'react/prop-types': 'off',
@@ -48,4 +60,5 @@ module.exports = {
       },
     ],
   },
-};
+  ignorePatterns: ['**/*.svg', '**/*eslintrc.js'],
+}
