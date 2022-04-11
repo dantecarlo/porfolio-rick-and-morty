@@ -1,6 +1,6 @@
 import CharacterCard from 'components/Characters/CharacterCard'
 import useAxios from 'hooks/useAxios'
-import React from 'react'
+import React, { FC } from 'react'
 import { getCharacters } from 'services/rickAndMorty.api'
 import { StyledSection } from 'styled-components/PageLayout.style'
 import { ICharacterAPI } from 'types'
@@ -9,7 +9,7 @@ import { DEFAULT_CHARACTERS_COUNT } from 'utils/constants'
 import { charactersAdapter } from '../../adapters/character.adapter'
 import { StyledCharactersContainer } from './Characters.page.style'
 
-const Characters = () => {
+const Characters: FC = () => {
   const { getData } = useAxios()
 
   const { data, isLoading, isError, error } = getData<ICharacterAPI>(
@@ -34,7 +34,8 @@ const Characters = () => {
   }
 
   if (isError) {
-    return console.error(error)
+    console.error(error)
+    return null
   }
 
   return (
