@@ -1,4 +1,4 @@
-import Skeleton from 'components/shared/Skeleton/Skeleton'
+import Skeleton from 'components/shared/Skeleton'
 import React, { FC } from 'react'
 import { ICharacterCard } from 'types'
 
